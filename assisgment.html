@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="main">
+<label for="numberInput">Enter a Number:</label>
+<input type="number" id="numberInput" oninput="validateInput()">
+
+<label for="studentName">Enter Name:</label>
+    <input type="name" id="nameInput" oninput="validateInput()">
+
+    <label for="rollnoInput">Enter Roll No.:</label>
+    <input type="number" id="rollnoInput" oninput="validateInput()">
+    <div style="color: red;" id="showerror"></div>
+
+    <button type="submit">submit</button>
+</div>
+<body>
+    <script>
+        document.getElementById("main").addEventListener("submit", function (e) {
+            e.preventDefault()
+            let numberInput = document.getElementById("numberInput");
+            let nameInput = document.getElementById("nameInput");
+            let rollnoInput = document.getElementById("rollnoInput");
+
+            
+            if (numberInput.value== "" || nameInput.value== "" || rollnoInput.value== "") {
+                document.getElementById("showerror").innerHTML = "All Fields are Required"
+
+            } 
+            else {
+                document.getElementById("showerror").innerHTML = ""
+            }
+            console.log(username.value);
+
+        }
+        )
+    </script>
+    
+</body>
+
+</html>
