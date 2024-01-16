@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+    
+</head>
+
+<body>
+    <div>
+        <form id="myform" onsubmit="return" action="index.html">
+            <div class="main">
+                <h3> Name - <input id="name" placeholder="enter your name"></h3>
+                <h3>Father Name - <input type="text" id="fatherName" placeholder="Enter your Fathers Name"></h3>
+                <h3>Roll No. -<input type="number" id="rollno" placeholder="Enter Your Roll Number"></h3>
+                <h3>Address -<input type="text" id="address" placeholder="Enter your Address"></h3>
+                <h3>City -<input type="text" id="City" placeholder="Enter City"></h3>
+                <h3>Pincode -<input type="number" id="pincode" placeholder="Enter Pincode"></h3>
+                <h3>Mobile No. -<input type="number" id="number" placeholder="Enter you Mobile number"></h3>
+                <!-- <h3> State <select id="indianStates" name="indianStates">
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+            </h3> -->
+            <div style="color: red;" id="showerror"></div>
+            </div>
+            
+            
+        </form>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Marks</th>
+                    <th>Marks Obtained</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Science</td>
+                    <td>100</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Maths</td>
+                    <td>100</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Social Science</td>
+                    <td>100</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>100</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Hindi</td>
+                    <td>100</td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br><br>
+        <button type="submit">submit</button>
+    </div>
+    <script>
+
+        document.getElementById("myform").addEventListener("submit", function (e) {
+            e.preventDefault()
+            let name = document.getElementById("name");
+            let rollno = document.getElementById("rollno");
+            let number = document.getElementById("number");
+            let fatherName = document.getElementById("fatherName")
+            let address = document.getElementById("address")
+            let pincode = document.getElementById("pincode")
+            let city = document.getElementById("city")
+
+            if (rollno.value == "") {
+                document.getElementById("showerror").innerHTML = "Rollno can't be blank"
+
+            }
+            else if (rollno.value.length != 7) {
+                document.getElementById("showerror").innerHTML = "Enter 7 digit Roll No"
+
+            }
+            else if (name.value == "") {
+                document.getElementById("showerror").innerHTML = "Name can't be blank"
+
+            }
+            else if (number.value == "") {
+                document.getElementById("showerror").innerHTML = "Number cannot be blank"
+
+            }
+            else if (number.value.length != 10) {
+                document.getElementById("showerror").innerHTML = "Enter Number in 10 digit"
+
+            }
+            else if (fatherName.value == "") {
+                document.getElementById("showerror").innerHTML = "Enter Fathers Name?"
+
+            }
+            else if (city.value == "") {
+                document.getElementById("showerror").innerHTML = "Enter City?"
+
+            }
+            else if (address.value == "") {
+                document.getElementById("showerror").innerHTML = "Enter Your Address"
+
+            }
+            else if (pincode.value == "") {
+                document.getElementById("showerror").innerHTML = "Enter Pincode"
+
+            }
+            else if (pincode.value.length != 6) {
+                document.getElementById("showerror").innerHTML = "Enter 6 digit pincode"
+            }
+            else {
+                document.getElementById("showerror").innerHTML = ""
+            }
+        }
+        )
+        
+    </script>
+</body>
+
+</html>
