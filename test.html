@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="currentTime"></div>
+    <input id="alarmTime" type="time">
+    <button id="set-Time">Set Alarm</button>
+
+    <script>
+        function currentTime(){
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            var time = hours + ":" + minutes + ":" + seconds;
+document.getElementsByClassName("currentTime").innerText= "Current Time" + time;
+        }
+        setInterval(currentTime,1000);
+    </script>
+</body>
+</html>
