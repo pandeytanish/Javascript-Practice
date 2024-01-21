@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f to c</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter temp in celsius");
+        b = (a * 9/5) + 32;
+        document.write(b,"Temeprature In farhanite");
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celsius to Fahrenheit Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #converter {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="converter">
+  <h2>Celsius to Fahrenheit Converter</h2>
+  <label for="celsiusInput">Enter Temperature in Celsius:</label>
+  <input type="number" id="celsiusInput" placeholder="Enter Celsius">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+</div>
+
+<script>
+  function convert() {
+    var celsiusValue = document.getElementById("celsiusInput").value;
+    
+    // Check if the input is a valid number
+    if (isNaN(celsiusValue)) {
+      alert("Please enter a valid number for Celsius temperature.");
+      return;
+    }
+
+    // Convert Celsius to Fahrenheit
+    var fahrenheitValue = (celsiusValue * 9/5) + 32;
+
+    // Display the result
+    document.getElementById("result").innerHTML = `${celsiusValue} Celsius is equal to ${fahrenheitValue.toFixed(2)} Fahrenheit.`;
+  }
+</script>
+
+</body>
+</html>
