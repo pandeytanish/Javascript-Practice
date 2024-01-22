@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find second largest number in array</h1>
+
+    <script>
+        function findSecondLargest(arr) {
+    if (arr.length < 2) {
+        return "Array should have at least two elements";
+    }
+
+    // Sort the array in descending order
+    arr.sort((a, b) => b - a);
+
+    // Return the second element in the sorted array
+    return arr[1];
+}
+
+// Example usage:
+const arr = [3, 8, 1, 5, 12, 7];
+const result = findSecondLargest(arr);
+console.log("Second largest number in the array:", result);
+
+    </script>
+</body>
+</html>
