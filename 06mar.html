@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    let car = {
+//     name : "TATA" ,
+//     Model : "Nexon",
+//     Year : "2015",
+//     new : function() {
+//         document.write(this.name)
+//     }
+//    }
+//    document.write(car.new);
+
+function fun()  
+{  
+var a = 4; // 'a' is the local variable, created by the fun()  
+function innerfun() // the innerfun() is the inner function, or a closure  
+{  
+return a;  
+}  
+return innerfun;  
+}  
+var output = fun();  
+document.write(output());  
+ 
+    </script>
+</body>
+</html>
