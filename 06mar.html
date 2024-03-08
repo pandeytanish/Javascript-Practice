@@ -7,27 +7,37 @@
 </head>
 <body>
     <script>
-//    let car = {
-//     name : "TATA" ,
-//     Model : "Nexon",
-//     Year : "2015",
-//     new : function() {
-//         document.write(this.name)
-//     }
-//    }
-//    document.write(car.new);
+   let car = {
+    name : "TATA" ,
+    Model : "Nexon",
+    Year : "2015",
+    new : function() {
+       return ${this.name
+    }
+   }
+   document.write(car.new);
 
-function fun()  
-{  
-var a = 4; // 'a' is the local variable, created by the fun()  
-function innerfun() // the innerfun() is the inner function, or a closure  
-{  
-return a;  
-}  
-return innerfun;  
-}  
-var output = fun();  
-document.write(output());  
+   
+const person = {
+    name: "Tanish",
+    age: 22,
+    greet: function(){
+        return `Hello ${this.name}, you are ${this.age} years old`
+    }
+}
+document.write(person.greet());
+
+// function fun()  
+// {  
+// var a = 4; // 'a' is the local variable, created by the fun()  
+// function innerfun() // the innerfun() is the inner function, or a closure  
+// {  
+// return a;  
+// }  
+// return innerfun;  
+// }  
+// var output = fun();  
+// document.write(output());  
  
     </script>
 </body>
