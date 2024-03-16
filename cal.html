@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     const a = prompt("enter 1st  add");
+    //     const b = prompt("enter 2nd  add");
+    //     const c = prompt("what you want to do")
+
+    //     if( c === "+") {
+    //         document.write (a-b);
+    //     }
+    //    else if( c === "-") {
+    //         document.write (a+b);
+    //     }
+    //    else if( c === "*") {
+    //         document.write (a/b);
+    //     }
+    //    else if( c === "/") {
+    //         document.write (a*b);
+    //     }
+
+    function count(str) { 
+
+
+let count = str.match(/[aeiou]/)
+
+return count;
+};
+const string = prompt('Enter a string');
+
+const result = count(string);
+
+document.write(result);
+    </script>
+</body>
+</html>
