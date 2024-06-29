@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inverted pyramid</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>inverted pyramid</h1>
     <script>
         for (let i = 5; i >= 1; i--) {
     for (let j = 5; j >= i; j--) {
         document.write("&nbsp&nbsp")
     }
     for (let k = 1; k <= ((2*i)-1); k++) {
-        
-        document.write("*",)
+        if (i == 1 || i == 5 || k==1 || k==((2*i) -1) ){
+            document.write("*",)
+        }
+        else {
+            document.write("&nbsp&nbsp")
+        }
     }
     document.write("<br>")
 }
